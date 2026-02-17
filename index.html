@@ -1,0 +1,1087 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>The Garden — K-Beauty Lash & PMU in Hamburg</title>
+  <meta name="description" content="Natural K-Beauty Lash & PMU in Hamburg by Lina. Precise, clean, elegant results. Book via Planity or WhatsApp."/>
+  <meta property="og:title" content="The Garden — K-Beauty Lash & PMU"/>
+  <meta property="og:description" content="Natural, elegant K-Beauty treatments in Hamburg."/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root {
+      --beige: #F5F0E8;
+      --sand: #E7DCCB;
+      --sage: #A8B7A6;
+      --sage-hover: #8e9d8c;
+      --green: #1F3A2E;
+      --dark: #1B1B1B;
+      --muted: #64665A;
+      --light-muted: #8A8C80;
+      --border: rgba(31,58,46,.12);
+      --serif: "Cormorant Garamond", Georgia, serif;
+      --sans: "Inter", system-ui, -apple-system, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--beige);
+      color: var(--dark);
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    /* ── UTILITY ── */
+    .uppercase { text-transform: uppercase; }
+    .tracking-wide { letter-spacing: 0.2em; }
+    .tracking-wider { letter-spacing: 0.3em; }
+    .text-micro { font-size: 10px; font-weight: 700; }
+    .text-nano { font-size: 9px; font-weight: 600; }
+
+    /* ── NAVBAR ── */
+    .navbar {
+      position: sticky; top: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 18px 40px;
+      background: rgba(245,240,232,.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-left { display: flex; gap: 28px; align-items: center; }
+    .nav-left a {
+      font-size: 10px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.25em;
+      color: var(--muted);
+      transition: color .2s;
+    }
+    .nav-left a:hover { color: var(--dark); }
+    .nav-logo {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 28px;
+      letter-spacing: -0.04em;
+      color: var(--green);
+    }
+    .nav-right { display: flex; gap: 18px; align-items: center; }
+    .nav-right a {
+      font-size: 10px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.2em;
+      color: var(--muted);
+      transition: color .2s;
+    }
+    .nav-right a:hover { color: var(--dark); }
+
+    /* ── BUTTONS ── */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 16px 32px;
+      font-size: 10px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.2em;
+      border: none; cursor: pointer;
+      transition: all .2s ease;
+    }
+    .btn-sage {
+      background: var(--sage); color: #fff;
+    }
+    .btn-sage:hover { background: var(--sage-hover); }
+    .btn-outline {
+      background: transparent;
+      border: 1px solid var(--green);
+      color: var(--green);
+    }
+    .btn-outline:hover { background: var(--green); color: #fff; }
+    .btn-text {
+      background: none; padding: 0;
+      border-bottom: 1px solid var(--dark);
+      padding-bottom: 4px;
+      color: var(--dark);
+    }
+    .btn-text:hover { color: var(--sage); border-color: var(--sage); }
+
+    /* ── HERO ── */
+    .hero {
+      display: flex;
+      min-height: 85vh;
+      position: relative;
+    }
+    .hero-left {
+      flex: 0 0 42%;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      padding: 60px 40px;
+      gap: 28px;
+    }
+    .arch {
+      width: 260px; height: 380px;
+      border-radius: 999px 999px 24px 24px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: 0 20px 50px rgba(0,0,0,.08);
+    }
+    .arch img { width: 100%; height: 100%; object-fit: cover; }
+    .hero-left-text { text-align: center; }
+    .hero-left-text h1 {
+      font-family: var(--serif);
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.35em;
+      color: var(--green);
+      margin-bottom: 12px;
+    }
+    .hero-left-text p {
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      line-height: 1.8;
+    }
+    .hero-right {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, rgba(168,183,166,.15), rgba(231,220,203,.3));
+    }
+    .hero-right img,
+    .hero-right video {
+      width: 100%; height: 100%;
+      object-fit: cover;
+    }
+    .hero-right::after {
+      content: "";
+      position: absolute; inset: 0;
+      background: rgba(0,0,0,.04);
+    }
+    .hero-badge {
+      position: absolute; top: 28px; right: 28px; z-index: 2;
+      padding: 10px 16px;
+      background: rgba(245,240,232,.85);
+      backdrop-filter: blur(6px);
+      border: 1px solid var(--border);
+      font-size: 9px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.3em;
+      color: var(--muted);
+    }
+
+    /* ── MARQUEE ── */
+    .marquee {
+      background: var(--sage);
+      border-top: 1px solid rgba(255,255,255,.2);
+      border-bottom: 1px solid rgba(255,255,255,.2);
+      overflow: hidden;
+      padding: 14px 0;
+    }
+    .marquee-track {
+      display: flex; gap: 40px;
+      white-space: nowrap;
+      animation: marquee 28s linear infinite;
+      color: #fff;
+    }
+    .marquee-item {
+      display: inline-flex; align-items: center; gap: 40px;
+      font-size: 10px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.3em;
+    }
+    .marquee-dot {
+      width: 4px; height: 4px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.5);
+    }
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    /* ── SECTIONS ── */
+    .section { padding: 100px 40px; }
+    .section-narrow { max-width: 1200px; margin: 0 auto; }
+
+    .section-head {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    .section-head .label {
+      font-size: 10px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.3em;
+      color: var(--sage);
+      margin-bottom: 16px;
+    }
+    .section-head h2 {
+      font-family: var(--serif);
+      font-size: 38px;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      color: var(--green);
+    }
+    .section-head p {
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.8;
+      max-width: 60ch;
+      margin-left: auto; margin-right: auto;
+    }
+
+    /* ── ABOUT ── */
+    .about-content {
+      max-width: 680px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .about-content p {
+      font-size: 15px;
+      line-height: 1.9;
+      color: var(--muted);
+    }
+    .about-content p strong {
+      color: var(--dark);
+    }
+
+    /* ── ABOUT VISUAL ── */
+    .about-visual {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .about-videos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .about-video-item {
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: 0 14px 36px rgba(0,0,0,.08);
+    }
+    .about-video-item:first-child {
+      aspect-ratio: 3/4;
+      transform: translateY(-16px);
+    }
+    .about-video-item:last-child {
+      aspect-ratio: 3/4;
+      transform: translateY(16px);
+    }
+    .about-video-item video {
+      width: 100%; height: 100%;
+      object-fit: cover;
+    }
+    .about-text {
+      text-align: left;
+    }
+    .about-text .label {
+      font-size: 10px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.3em;
+      color: var(--sage);
+      margin-bottom: 16px;
+    }
+    .about-text h2 {
+      font-family: var(--serif);
+      font-size: 34px; font-weight: 500;
+      color: var(--green);
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    .about-text p {
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--muted);
+    }
+    .about-text p strong { color: var(--dark); }
+
+    /* ── GALLERY COLLAGE ── */
+    .collage {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr 1.3fr 1.1fr 1fr;
+      gap: 16px;
+      align-items: end;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .collage-item {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: 0 12px 30px rgba(0,0,0,.06);
+      background: linear-gradient(135deg, rgba(168,183,166,.12), rgba(231,220,203,.3));
+    }
+    .collage-item img { width: 100%; height: 100%; object-fit: cover; }
+    .ci-1 { aspect-ratio: 3/4; transform: translateY(24px); }
+    .ci-2 { aspect-ratio: 4/5; transform: translateY(-16px); }
+    .ci-3 { aspect-ratio: 3/4; box-shadow: 0 20px 50px rgba(0,0,0,.1); z-index: 2; }
+    .ci-4 { aspect-ratio: 4/5; transform: translateY(16px); }
+    .ci-5 { aspect-ratio: 3/4; transform: translateY(-24px); }
+
+    .brand-statement {
+      text-align: center;
+      padding: 80px 40px 0;
+    }
+    .brand-statement p {
+      font-family: var(--serif);
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 1.3;
+      color: var(--green);
+      max-width: 700px;
+      margin: 0 auto;
+      letter-spacing: -0.01em;
+    }
+    .brand-statement .micro {
+      margin-top: 16px;
+      font-family: var(--sans);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: var(--light-muted);
+    }
+
+    /* ── VALUE STRIP ── */
+    .value-strip {
+      background: var(--sage);
+      padding: 28px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+    }
+    .value-strip span {
+      font-family: var(--serif);
+      font-size: 26px;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      display: inline-flex; align-items: center; gap: 48px;
+    }
+    .value-leaf {
+      width: 16px; height: 16px;
+      border-radius: 6px 0 6px 0;
+      background: rgba(255,255,255,.35);
+      transform: rotate(15deg);
+    }
+
+    /* ── FEATURE (에디토리얼 이미지+텍스트) ── */
+    .feature {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 60px;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .feature-img {
+      position: relative;
+    }
+    .feature-img-main {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0,0,0,.08);
+      aspect-ratio: 4/5;
+      background: linear-gradient(135deg, rgba(168,183,166,.15), rgba(231,220,203,.35));
+    }
+    .feature-img-main img { width:100%; height:100%; object-fit:cover; }
+    .feature-img-float {
+      position: absolute;
+      bottom: -20px; right: -20px;
+      width: 180px; height: 220px;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 4px solid var(--beige);
+      box-shadow: 0 14px 36px rgba(0,0,0,.10);
+      background: linear-gradient(135deg, rgba(168,183,166,.2), rgba(231,220,203,.4));
+    }
+    .feature-img-float img { width:100%; height:100%; object-fit:cover; }
+    .feature-text h3 {
+      font-family: var(--serif);
+      font-size: 34px; font-weight: 500;
+      color: var(--green);
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    .feature-text p {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.9;
+      margin-bottom: 28px;
+    }
+
+    /* ── MENU / PRICE ── */
+    .menu-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .menu-card {
+      background: rgba(251,248,242,.6);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 32px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.04);
+    }
+    .menu-card-title {
+      font-family: var(--serif);
+      font-size: 24px; font-weight: 500;
+      color: var(--green);
+      margin-bottom: 20px;
+    }
+    .menu-card .label-micro {
+      font-size: 10px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.25em;
+      color: var(--sage);
+      margin-bottom: 8px;
+    }
+    .menu-list { display: flex; flex-direction: column; gap: 12px; }
+    .menu-item {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 14px 16px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: rgba(245,240,232,.5);
+    }
+    .menu-item-name { font-weight: 600; font-size: 13px; }
+    .menu-item-meta { font-size: 11px; color: var(--light-muted); margin-top: 2px; }
+    .menu-item-price { font-weight: 700; font-size: 14px; white-space: nowrap; }
+
+    .price-image {
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 30px rgba(0,0,0,.04);
+      min-height: 400px;
+      background: linear-gradient(135deg, rgba(168,183,166,.12), rgba(231,220,203,.3));
+      display: flex; align-items: center; justify-content: center;
+    }
+    .price-image img { width:100%; height:100%; object-fit:cover; }
+    .price-placeholder {
+      font-size: 11px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.2em;
+      color: var(--light-muted);
+    }
+
+    /* ── PMU GALLERY ── */
+    .pmu-gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+      max-width: 1100px;
+      margin: 0 auto 48px;
+    }
+    .pmu-gallery-item {
+      position: relative;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: 0 12px 30px rgba(0,0,0,.06);
+      aspect-ratio: 3/4;
+    }
+    .pmu-gallery-item img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform .4s ease;
+    }
+    .pmu-gallery-item:hover img {
+      transform: scale(1.03);
+    }
+    .pmu-gallery-caption {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 16px 18px;
+      background: linear-gradient(transparent, rgba(0,0,0,.45));
+      color: #fff;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+    }
+    .pmu-gallery-item video {
+      width: 100%; height: 100%;
+      object-fit: cover;
+    }
+
+    /* ── BOOKING ── */
+    .booking-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .booking-card {
+      background: rgba(251,248,242,.6);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 36px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.04);
+      text-align: center;
+    }
+    .booking-card h3 {
+      font-family: var(--serif);
+      font-size: 24px; font-weight: 500;
+      color: var(--green);
+      margin-bottom: 12px;
+    }
+    .booking-card p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+    .booking-card .cta { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+
+    /* ── FAQ ── */
+    .faq-list {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item {
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: rgba(251,248,242,.5);
+      overflow: hidden;
+    }
+    .faq-item summary {
+      padding: 18px 22px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 14px;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-item summary::after {
+      content: "+";
+      font-size: 18px;
+      color: var(--sage);
+      font-weight: 300;
+      transition: transform .2s;
+    }
+    .faq-item[open] summary::after {
+      transform: rotate(45deg);
+    }
+    .faq-item p {
+      padding: 0 22px 18px;
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    /* ── FOOTER ── */
+    .footer {
+      border-top: 1px solid var(--border);
+      padding: 60px 40px 40px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto 48px;
+    }
+    .footer-col h4 {
+      font-size: 10px; font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: var(--dark);
+      margin-bottom: 18px;
+    }
+    .footer-col p,
+    .footer-col a {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 2;
+      display: block;
+    }
+    .footer-col a:hover { color: var(--dark); }
+    .footer-brand {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 24px;
+      color: var(--green);
+      margin-bottom: 12px;
+    }
+    .footer-bottom {
+      text-align: center;
+      padding-top: 28px;
+      border-top: 1px solid var(--border);
+    }
+    .footer-bottom span {
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 0.4em;
+      color: var(--light-muted);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 960px) {
+      .hero { flex-direction: column; min-height: auto; }
+      .hero-left { flex: none; padding: 48px 24px; }
+      .hero-right { min-height: 50vh; }
+      .collage { grid-template-columns: 1fr 1fr; gap: 12px; }
+      .ci-1,.ci-2,.ci-4,.ci-5 { transform: none; }
+      .ci-3 { grid-column: span 2; }
+      .feature { grid-template-columns: 1fr; gap: 32px; }
+      .menu-grid, .booking-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .nav-left { display: none; }
+      .section { padding: 60px 20px; }
+      .section-head h2 { font-size: 30px; }
+      .brand-statement p { font-size: 26px; }
+      .value-strip { gap: 24px; }
+      .value-strip span { font-size: 20px; gap: 24px; }
+    }
+    @media (max-width: 600px) {
+      .navbar { padding: 14px 20px; }
+      .collage { grid-template-columns: 1fr 1fr; }
+      .ci-3 { grid-column: span 2; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .hero-left-text h1 { font-size: 12px; }
+      .arch { width: 200px; height: 300px; }
+      .pmu-gallery { grid-template-columns: 1fr; gap: 16px; }
+      .about-visual { grid-template-columns: 1fr; gap: 32px; }
+      .about-videos { max-width: 320px; margin: 0 auto; }
+      .about-text { text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <nav class="nav-left">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#booking">Booking</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a href="#top" class="nav-logo">The Garden</a>
+    <div class="nav-right">
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://wa.me/message/FE6YUYQ2HS5TP1" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn btn-sage" href="https://www.planity.com/de-DE/the-garden-22525-hamburg/reservation" target="_blank" rel="noopener">Book now</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero-left">
+      <div class="arch">
+        <img src="profile/profile picture .png" alt="Lina — K-Beauty Designer"/>
+      </div>
+      <div class="hero-left-text">
+        <h1>K-Beauty &middot; Lash &middot; PMU</h1>
+        <p>Natural beauty, refined in Seoul<br/>— now in Hamburg.</p>
+      </div>
+      <a class="btn btn-text" href="#services">Entdecke die Behandlungen</a>
+    </div>
+    <div class="hero-right">
+      <div class="hero-badge">Hamburg &middot; Lash & PMU</div>
+      <video src="eyelash/4aab372935e641da9d8358cee7eadc78.mov" autoplay muted loop playsinline></video>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee">
+    <div class="marquee-track">
+      <span class="marquee-item">Planity Booking <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Natural K-Beauty <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Lashlift &middot; Extensions &middot; PMU <span class="marquee-dot"></span></span>
+      <span class="marquee-item">WhatsApp Support <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Customized Design <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Precise &middot; Clean &middot; Elegant <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Planity Booking <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Natural K-Beauty <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Lashlift &middot; Extensions &middot; PMU <span class="marquee-dot"></span></span>
+      <span class="marquee-item">WhatsApp Support <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Customized Design <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Precise &middot; Clean &middot; Elegant <span class="marquee-dot"></span></span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="section-narrow">
+      <div class="about-visual">
+        <div class="about-videos">
+          <div class="about-video-item">
+            <video src="profil1.mov" autoplay muted loop playsinline></video>
+          </div>
+          <div class="about-video-item">
+            <video src="profile2.mov" autoplay muted loop playsinline></video>
+          </div>
+        </div>
+        <div class="about-text">
+          <div class="label">About Lina</div>
+          <h2>Natürliche Schönheit,<br/>präzise unterstrichen</h2>
+          <p>
+            <strong>Ich bin Lina, Lash- und PMU-Designerin aus Seoul und lebe in Hamburg.</strong>
+            Ich habe mich auf natürliche, hochwertige Behandlungen im K-Beauty-Stil spezialisiert.
+            Mein Ziel ist es, deine natürliche Schönheit mit präziser und sorgfältiger Arbeit zu unterstreichen.
+            Jede Behandlung wird individuell angepasst, damit du dich wohlfühlst und mit einem eleganten,
+            natürlichen Ergebnis nach Hause gehst.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY COLLAGE -->
+  <section class="section" style="padding-top:0;" id="gallery">
+    <div class="collage">
+      <div class="collage-item ci-1"><img src="eyelash/BA0A47C5-C7F1-4DD5-A957-612F4BFBA4EC.jpg" alt="Natural Lashlift"/></div>
+      <div class="collage-item ci-2"><img src="eyelash/5CCCC879-728A-48F1-84E9-6959D68E5235.jpg" alt="Lashlift Ergebnis"/></div>
+      <div class="collage-item ci-3"><img src="closeup1.jpg" alt="Lash Extension Detail Side Cut"/></div>
+      <div class="collage-item ci-4"><img src="eyelash/B39C1847-ECC0-4B84-B866-F3C7B59FFD73.jpg" alt="Lash Extension Detail"/></div>
+      <div class="collage-item ci-5"><img src="eyelash/828B953B-00E7-416A-AEEF-1AA8F30EFEF2.jpg" alt="Lash Result Studio"/></div>
+    </div>
+    <div class="brand-statement">
+      <p>"Natural, refined, and quietly confident — beauty that feels like yours."</p>
+      <div class="micro">K-Beauty technique &middot; tailored to your features</div>
+    </div>
+  </section>
+
+  <!-- VALUE STRIP -->
+  <div class="value-strip">
+    <span>Natural</span>
+    <div class="value-leaf"></div>
+    <span>Precise</span>
+    <div class="value-leaf"></div>
+    <span>Custom</span>
+  </div>
+
+  <!-- FEATURE SECTION -->
+  <section class="section">
+    <div class="feature">
+      <div class="feature-img">
+        <div class="feature-img-main">
+          <img src="eyelash/DEF01BB6-1620-44A6-B6DF-96CFBA4023B2.jpg" alt="Lash Extension Close-up"/>
+        </div>
+        <div class="feature-img-float">
+          <img src="closeup1.jpg" alt="Detail Side Cut — Lash Extension Close-up"/>
+        </div>
+      </div>
+      <div class="feature-text">
+        <h3>Elegant, wearable, designed for your face</h3>
+        <p>
+          Jede Behandlung wird auf deine Augenform, deinen Alltag und deinen Wunsch-Look abgestimmt.
+          Saubere Technik, feine Details und ein sanfter Prozess — damit du dich während und nach
+          der Behandlung wohlfühlst.
+        </p>
+        <a class="btn btn-sage" href="https://www.planity.com/de-DE/the-garden-22525-hamburg/reservation" target="_blank" rel="noopener">Jetzt buchen</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE 2 -->
+  <div class="marquee">
+    <div class="marquee-track">
+      <span class="marquee-item">Cruelty Free <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Vegan Products <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Hygienic Process <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Individual Aftercare <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Cruelty Free <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Vegan Products <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Hygienic Process <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Individual Aftercare <span class="marquee-dot"></span></span>
+    </div>
+  </div>
+
+  <!-- SERVICES / PRICE MENU -->
+  <section class="section" id="services">
+    <div class="section-narrow">
+      <div class="section-head">
+        <div class="label">Services</div>
+        <h2>Augenbrauen | Wimpern</h2>
+        <p>Preise & Dauer — weitere Services findest du direkt in Planity.</p>
+      </div>
+
+      <div class="pmu-gallery">
+        <div class="pmu-gallery-item">
+          <img src="eyelash/FF30DCF9-68C0-4BFF-9161-1974686CBEC7.jpg" alt="Lash Extension Ergebnis"/>
+          <div class="pmu-gallery-caption">Lash Extension</div>
+        </div>
+        <div class="pmu-gallery-item">
+          <img src="eyelash/585D88F2-51CF-42C8-8D31-B77DB3CC5E76.jpg" alt="Lashlift Close-up"/>
+          <div class="pmu-gallery-caption">Lashlift</div>
+        </div>
+        <div class="pmu-gallery-item">
+          <video src="eyelash/4aab372935e641da9d8358cee7eadc78.mov" autoplay muted loop playsinline></video>
+          <div class="pmu-gallery-caption">Lash Result</div>
+        </div>
+        <div class="pmu-gallery-item">
+          <img src="eyelash/5CCCC879-728A-48F1-84E9-6959D68E5235.jpg" alt="Lashlift Ergebnis"/>
+          <div class="pmu-gallery-caption">Lashlift</div>
+        </div>
+        <div class="pmu-gallery-item">
+          <img src="eyelash/B39C1847-ECC0-4B84-B866-F3C7B59FFD73.jpg" alt="Lash Extension Detail"/>
+          <div class="pmu-gallery-caption">Extension Detail</div>
+        </div>
+        <div class="pmu-gallery-item">
+          <img src="eyelash/DEF01BB6-1620-44A6-B6DF-96CFBA4023B2.jpg" alt="Lash Extension Close-up"/>
+          <div class="pmu-gallery-caption">Close-up</div>
+        </div>
+        <div class="pmu-gallery-item">
+          <img src="eyelash/BA0A47C5-C7F1-4DD5-A957-612F4BFBA4EC.jpg" alt="Natural Lashlift"/>
+          <div class="pmu-gallery-caption">Natural Look</div>
+        </div>
+        <div class="pmu-gallery-item">
+          <img src="eyelash/4D180B08-31F6-475D-8D31-FB686EE3A6C7.jpg" alt="Lash Extension Prozess"/>
+          <div class="pmu-gallery-caption">Process</div>
+        </div>
+        <div class="pmu-gallery-item">
+          <img src="eyelash/7607B640-E8D9-4C03-9ACF-CCD4B92DC028.jpg" alt="Lashlift Natural"/>
+          <div class="pmu-gallery-caption">Natural Lift</div>
+        </div>
+        <div class="pmu-gallery-item">
+          <img src="eyelash/828B953B-00E7-416A-AEEF-1AA8F30EFEF2.jpg" alt="Lash Result Studio"/>
+          <div class="pmu-gallery-caption">Studio Result</div>
+        </div>
+      </div>
+
+      <div class="menu-grid">
+        <div class="menu-card">
+          <div class="label-micro">Signature Lashes</div>
+          <div class="menu-card-title">Lashes Menu</div>
+          <div class="menu-list">
+            <div class="menu-item">
+              <div>
+                <div class="menu-item-name">Korean Lashlift</div>
+                <div class="menu-item-meta">45 Min.</div>
+              </div>
+              <div class="menu-item-price">70 €</div>
+            </div>
+            <div class="menu-item">
+              <div>
+                <div class="menu-item-name">Korean Lashlift mit Färben</div>
+                <div class="menu-item-meta">50 Min.</div>
+              </div>
+              <div class="menu-item-price">75 €</div>
+            </div>
+            <div class="menu-item">
+              <div>
+                <div class="menu-item-name">Wimpernverlängerung 1:1</div>
+                <div class="menu-item-meta">1 Std.</div>
+              </div>
+              <div class="menu-item-price">110 €</div>
+            </div>
+            <div class="menu-item">
+              <div>
+                <div class="menu-item-name">Personalisierung (Anime / Wispy / Wet Look)</div>
+                <div class="menu-item-meta">2 Std.</div>
+              </div>
+              <div class="menu-item-price">150 €</div>
+            </div>
+            <div class="menu-item">
+              <div>
+                <div class="menu-item-name">Volume (Light, Medium)</div>
+                <div class="menu-item-meta">1 Std. 30 Min.</div>
+              </div>
+              <div class="menu-item-price">130 €</div>
+            </div>
+          </div>
+          <div style="margin-top:20px;">
+            <a class="btn btn-outline" href="https://www.planity.com/de-DE/the-garden-22525-hamburg/reservation" target="_blank" rel="noopener">Mehr in Planity</a>
+          </div>
+        </div>
+
+        <div class="price-image">
+          <img src="eyelash/5B473628-303B-4480-8F4B-9A67A385516E.jpg" alt="Lashlift Ergebnis"/>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PMU -->
+  <section class="section" id="pmu" style="padding-top:0;">
+    <div class="section-narrow">
+      <div class="section-head">
+        <div class="label">Semi-Permanent</div>
+        <h2>PMU | Semi-permanentes Make-up</h2>
+        <p>Auf Anfrage — inklusive Beratung & individueller Planung.</p>
+      </div>
+
+      <div class="pmu-gallery">
+        <div class="pmu-gallery-item">
+          <img src="pmu/IMG_4333.JPG" alt="Darklips Neutralization + Coloring"/>
+          <div class="pmu-gallery-caption">Lip Blush</div>
+        </div>
+        <div class="pmu-gallery-item">
+          <img src="pmu/IMG_7886 2.JPG" alt="Lip Blush — Vorher &amp; Nachher"/>
+          <div class="pmu-gallery-caption">Before &amp; After</div>
+        </div>
+        <div class="pmu-gallery-item">
+          <img src="pmu/IMG_8566.jpg" alt="Microblading — Vorher &amp; Nachher"/>
+          <div class="pmu-gallery-caption">Microblading</div>
+        </div>
+      </div>
+
+      <div class="menu-grid">
+        <div class="menu-card">
+          <div class="label-micro">Auf Anfrage</div>
+          <div class="menu-card-title">PMU Menu</div>
+          <div class="menu-list">
+            <div class="menu-item">
+              <div>
+                <div class="menu-item-name">Lip Blush inkl. Beratung</div>
+                <div class="menu-item-meta">1 Std. 30 Min.</div>
+              </div>
+              <div class="menu-item-price">Auf Anfrage</div>
+            </div>
+            <div class="menu-item">
+              <div>
+                <div class="menu-item-name">Korean Microblading</div>
+                <div class="menu-item-meta">1 Std. 40 Min.</div>
+              </div>
+              <div class="menu-item-price">Auf Anfrage</div>
+            </div>
+            <div class="menu-item">
+              <div>
+                <div class="menu-item-name">Powderbrows</div>
+                <div class="menu-item-meta">1 Std. 40 Min.</div>
+              </div>
+              <div class="menu-item-price">Auf Anfrage</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" style="display:flex; flex-direction:column; justify-content:center;">
+          <div class="label-micro">Consultation first</div>
+          <div class="menu-card-title">Why "Auf Anfrage"?</div>
+          <p style="color:var(--muted); font-size:14px; line-height:1.9; margin-bottom:24px;">
+            PMU ist immer individuell. Wir klären zuerst Wunsch-Look, Hauttyp, Alltag und Pflege —
+            damit das Ergebnis natürlich wirkt und langfristig schön bleibt.
+          </p>
+          <div>
+            <a class="btn btn-sage" href="https://wa.me/message/FE6YUYQ2HS5TP1" target="_blank" rel="noopener">Beratung via WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section class="section" id="booking">
+    <div class="section-narrow">
+      <div class="section-head">
+        <div class="label">Booking</div>
+        <h2>Termin vereinbaren</h2>
+        <p>Wähle die bequemste Option — online oder direkt per WhatsApp.</p>
+      </div>
+
+      <div class="booking-grid">
+        <div class="booking-card">
+          <h3>Beauty-Termine</h3>
+          <p>Buche direkt über Planity oder schreibe mir auf WhatsApp.</p>
+          <div class="cta">
+            <a class="btn btn-sage" href="https://www.planity.com/de-DE/the-garden-22525-hamburg/reservation" target="_blank" rel="noopener">Online buchen</a>
+            <a class="btn btn-outline" href="https://wa.me/message/FE6YUYQ2HS5TP1" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+        <div class="booking-card">
+          <h3>Hair-Termine</h3>
+          <p>Termine für The Garden vereinbaren Sie bitte via WhatsApp <strong>+420 722 161 337</strong>.</p>
+          <div class="cta">
+            <a class="btn btn-sage" href="https://wa.me/420722161337" target="_blank" rel="noopener">Hair WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="section-narrow">
+      <div class="section-head">
+        <div class="label">FAQ</div>
+        <h2>Häufige Fragen</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Wie lange hält ein Lashlift?</summary>
+          <p>Je nach Wimpernzyklus und Pflege meist mehrere Wochen. Nach der Behandlung bekommst du klare Pflegehinweise.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Ist es für empfindliche Augen geeignet?</summary>
+          <p>Bitte sag mir vorab Bescheid (Allergien / empfindliche Augen). Wir wählen dann die passende Lösung und arbeiten besonders sanft.</p>
+        </details>
+        <details class="faq-item">
+          <summary>PMU: Wie läuft die Beratung ab?</summary>
+          <p>Wir klären Wunsch-Look, Hauttyp, Alltag und realistische Farbentwicklung — damit das Ergebnis natürlich bleibt.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Was muss ich vor dem Termin beachten?</summary>
+          <p>Komm möglichst ohne Augen-Make-up. Bei PMU bitte vorab kurz per WhatsApp abklären.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE FOOTER -->
+  <div class="marquee">
+    <div class="marquee-track">
+      <span class="marquee-item">The Garden <span class="marquee-dot"></span></span>
+      <span class="marquee-item">K-Beauty Hamburg <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Lash &middot; PMU &middot; Natural <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Book via Planity <span class="marquee-dot"></span></span>
+      <span class="marquee-item">The Garden <span class="marquee-dot"></span></span>
+      <span class="marquee-item">K-Beauty Hamburg <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Lash &middot; PMU &middot; Natural <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Book via Planity <span class="marquee-dot"></span></span>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-brand">The Garden</div>
+        <p>Natural K-Beauty Lash & PMU in Hamburg.<br/>Precise, clean, elegant results.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#pmu">PMU</a>
+        <a href="#booking">Booking</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="https://wa.me/message/FE6YUYQ2HS5TP1" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://www.planity.com/de-DE/the-garden-22525-hamburg/reservation" target="_blank" rel="noopener">Planity</a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="#">Impressum</a>
+        <a href="#">Datenschutz</a>
+        <p style="margin-top:12px; font-size:11px; line-height:1.7;">
+          Hinweis: Ergebnisse können individuell variieren. Bei Fragen gerne via WhatsApp.
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="y"></span> The Garden &middot; Hamburg</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
